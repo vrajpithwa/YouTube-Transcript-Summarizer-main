@@ -10,21 +10,22 @@
 
     <title>Youtube Transcript Summarizer</title>
     <style>
-        *{
+  * {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-}
+  }
 
-#hero{
+  #hero {
     width: 100%;
     height: 100vh;
     background-image: url(/static/bg2.png);
     background-size: cover;
     background-position: center;
     position: relative;
-}
-.navbar{
+  }
+
+  .navbar {
     width: 90%;
     margin: auto;
     display: flex;
@@ -32,238 +33,220 @@
     justify-content: space-between;
     position: relative;
     z-index: 10;
-}
-.navbar .logo{
+  }
+
+  .navbar .logo {
     width: 120px;
     margin: 30px 0;
     cursor: pointer;
-}
-.user {
+  }
+
+  .user {
     display: flex;
     align-items: center;
-}
-.user img{
+  }
+
+  .user img {
     width: 30px;
     margin-left: 50px;
     cursor: pointer;
-}
-button{
+  }
+
+  button {
     padding: 8px 25px;
-    background: transparent;
+    background: #4CAF50; /* Green color */
     outline: none;
-    border: 2px solid #fff;
+    border: 2px solid #4CAF50; /* Green border */
     border-radius: 20px;
-    color: #fff;
-    font-size:20px;
+    color: #fff; /* White text */
+    font-size: 20px;
     font-weight: bold;
     cursor: pointer;
-}
-.marq{
-      font-size: 14px;
-      font-family: Georgia (serif); 
-      color: #ffffff;
-      background-color: rgba(86, 86, 86, 0.3);
-      backdrop-filter: blur(10px);
-    }
-.container{
-    
+  }
+
+  .marq {
+    font-size: 14px;
+    font-family: Georgia, serif;
+    color: #333; /* Dark gray text */
+    background-color: rgba(220, 220, 220, 0.3); /* Light gray background */
+    backdrop-filter: blur(10px);
+  }
+
+  .container {
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     left: 0;
     top: 0;
     width: 50%;
     height: 60vh;
-}
-.info{
+  }
+
+  .info {
     width: 550px;
-    color: #fff;
+    color: #333; /* Dark gray text */
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50);
-}
-.info h1{
+  }
+
+  .info h1 {
     margin-top: -190px;
     font-size: 60px;
     letter-spacing: 10px;
-    font-family: Gentona;
-    /* filter: blur(add = 1, direction = 220, strength = 10); */
-    /* filter: glow(color=grey strength=30); */
-}
-.info input{
+    font-family: Gentona, sans-serif;
+  }
+
+  .info input {
     width: 50%;
     padding: 8px 10px;
     background: transparent;
     outline: none;
-    border: 2px solid #fff;
+    border: 2px solid #333; /* Dark gray border */
     border-radius: 20px;
-    color: #fff;
+    color: #333; /* Dark gray text */
     font-size: 12px;
-}
+  }
 
-::placeholder{
-   color: #ccc; 
-}
+  ::placeholder {
+    color: #ccc; /* Light gray placeholder text */
+  }
 
-button1{
+  button1 {
     padding: 80px 100px;
     background: transparent;
     outline: none;
-    border: 2px solid #fff;
+    border: 2px solid #333; /* Dark gray border */
     border-radius: 20px;
-    color: #fff;
+    color: #333; /* Dark gray text */
     font-size: 12px;
     font-weight: bold;
     cursor: pointer;
-}
-    body {
+  }
+
+  body {
     margin: 0;
-    }
+  }
 
-    /* ====================
-        Background
-    =======================*/
-
-    .background {
+  .background {
     width: 100vw;
     height: 100vh;
     animation: pulse 5s infinite;
     overflow: hidden;
-    }
+  }
 
-    @keyframes pulse {
-    0% {background: #d10053;}
-    50% {background: #cc145e;}
-    100% {background: #d10053;}
+  @keyframes pulse {
+    0% {
+      background: #D2B4DE; /* Lavender color */
     }
+    50% {
+      background: #9B59B6; /* Amethyst color */
+    }
+    100% {
+      background: #D2B4DE; /* Lavender color */
+    }
+  }
 
-    .background p {
+  .background p {
     z-index: 999;
     margin: 0;
-    color: #ffffff;
+    color: #fff; /* White text */
     text-transform: uppercase;
-    font-family: lato;
+    font-family: Lato, sans-serif;
     font-size: 50px;
     position: absolute;
     left: 50%;
     top: 10%;
     transform: translateX(-50%);
-    }
+  }
 
-    .elements {
+  .elements {
     height: 100vh;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
-    }
+  }
 
-    /* ====================
-        Squares
-    =======================*/
+  .square {
+    border: 10px dashed #E74C3C; /* Alizarin color */
+  }
 
-    .square {
-    border: 10px dashed #db0f60;
-    }
-
-    .sq2{
+  .sq2 {
     animation: move1 180s infinite;
     animation-timing-function: linear;
     width: 1110px;
     height: 1110px;
-    }
+  }
 
-    @keyframes move1 {
-    0% {
-        transform: rotate(0deg);
-        opacity: 0.5;
-    }
-    
-    50% {
-        width: 1000px;
-        height: 1000px;
-    }
-    
-    100% {
-        transform: rotate(1000deg);
-        opacity: 1;
-    }
-    }
-
-    .sq3 {
+  .sq3 {
     width: 600px;
     height: 600px;
     animation: move1 120s infinite;
     animation-timing-function: linear;
-    }
+  }
 
-    .sq1 {
+  .sq1 {
     width: 500px;
     height: 500px;
     animation: move1 100s infinite;
     animation-timing-function: linear;
-    }
+  }
 
-    .wrapper {
-     
-     position:absolute;
-     left: 50%;
-     top: 50%;
-     transform: translate(-50%,-50%);
-     margin-top: 130px;
-   }
-   
-   .search-txt {
-   
-       color: black;
-       background:whitesmoke;
-       border: none;
-       border-radius: 50px;
-       padding: 30px;
-       font-size: 12px;
-       width: 0px;
-       transition: 0.10s;
-       box-sizing: border-box;
-       font-size: 20px;
-       height: 60px;
-       
-   /* border: white solid; */
-   }
-   .simg {
-     position: absolute;
-     top: 5px;
-     right: 5px;
-     background:none;
-     border: 0.5px rgba(255, 255, 255, 0) solid;
-     height: 10%;
-     width: 10%;
-     padding: 10px;
-     background:transparent; 
-     border-radius: 50px;
-     transition: 0.5s;
-   }
-   
-   /* Hovering  */
-   
-    .wrapper:hover > .search-txt {
-   width: 400px;
-   transition: 0.5s;
-   
-   }
-   
-   .wrapper:hover > img {
-   transition: 0.7s;
-   background-color: white;
-   
-   
-   }
-   .dmgt-text {
-    color: #ffffff;
+  .wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 130px;
+  }
+
+  .search-txt {
+    color: #333; /* Dark gray text */
+    background: #EAEAEA; /* Light gray background */
+    border: none;
+    border-radius: 50px;
+    padding: 30px;
+    font-size: 12px;
+    width: 0px;
+    transition: 0.10s;
+    box-sizing: border-box;
+    font-size: 20px;
+    height: 60px;
+  }
+
+  .simg {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: 0.5px rgba(255, 255, 255, 0) solid;
+    height: 10%;
+    width: 10%;
+    padding: 10px;
+    background: transparent;
+    border-radius: 50px;
+    transition: 0.5s;
+  }
+
+  .wrapper:hover > .search-txt {
+    width: 400px;
+    transition: 0.5s;
+  }
+
+  .wrapper:hover > img {
+    transition: 0.7s;
+    background-color: white;
+  }
+
+  .dmgt-text {
+    color: #fff; /* White text */
     font-family: cursive;
     padding-top: 160px;
     text-align: center;
   }
-    </style>
+</style>
+
   </head>
   <body >
     <form action = '/new' method="POST">

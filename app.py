@@ -14,6 +14,7 @@ import pyttsx3
 import os
 import boto3
 
+nltk.download('punkt')
 
 # engine = pyttsx3.init()
 # voices = engine.getProperty('voices')
