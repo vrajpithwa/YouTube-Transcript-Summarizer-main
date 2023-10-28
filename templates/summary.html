@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Youtube Transcript Summarizer</title>
+  </head>
+  <style> 
+    div .main{
+      overflow-x: hidden;
+      overflow-y: auto; 
+    }
+    div.a {  
+      font-size: 20px;
+      font-family: cursive; 
+      color: #ffffff;
+      word-wrap: normal;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px); 
+      width: 100%;
+      height: 80vh;
+      align-items: center;
+      overflow-x: hidden;
+      overflow-y: auto;
+    } 
+    .head{
+      font-size: 24px;
+      font-family: cursive; 
+      color: #ffffff;
+      word-wrap: normal;
+      margin-top: 20px;
+      margin-left: 150px;
+    } 
+    .marq{
+      font-size: 14px;
+      font-family: Georgia (serif); 
+      color: blue;
+      background-color: rgba(86, 86, 86, 0.3);
+      backdrop-filter: blur(10px);
+    }
+    body {
+    margin: 0;
+    }
+
+    /* ====================
+        Background
+    =======================*/
+
+    .background {
+    width: 100vw;
+    height: 100vh;
+    animation: pulse 5s infinite;
+    overflow: hidden;
+    }
+
+    @keyframes pulse {
+    0% {background: #d10053;}
+    50% {background: #cc145e;}
+    100% {background: #d10053;}
+    }
+
+    .background p {
+    z-index: 999;
+    margin: 0;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: lato;
+    font-size: 50px;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    }
+
+    .elements {
+    height: 100vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    }
+
+    /* ====================
+        Squares
+    =======================*/
+
+    .square {
+    border: 10px dashed #db0f60;
+    }
+
+    .sq2{
+    animation: move1 180s infinite;
+    animation-timing-function: linear;
+    width: 1110px;
+    height: 1110px;
+    }
+
+    @keyframes move1 {
+    0% {
+        transform: rotate(0deg);
+        opacity: 0.5;
+    }
+    
+    50% {
+        width: 1000px;
+        height: 1000px;
+    }
+    
+    100% {
+        transform: rotate(1000deg);
+        opacity: 1;
+    }
+    }
+
+    .sq3 {
+    width: 600px;
+    height: 600px;
+    animation: move1 120s infinite;
+    animation-timing-function: linear;
+    }
+
+    .sq1 {
+    width: 500px;
+    height: 500px;
+    animation: move1 100s infinite;
+    animation-timing-function: linear;
+    }
+    .speak{
+      width: 30px;
+      height: 30px;
+      border-radius: 10px;
+    }
+    </style> 
+<body style="background-color: rgb(5, 82, 82);">
+  <div class="background">
+    <div class="head">
+      <h1>REFER TO THE SUMMARY OF THE VIDEO</h1>
+    </div>
+    <marquee  class="marq"> <b>Note: If the summary is not showing up then the video must have the transcript language english.</b></marquee>
+    <!-- <div>
+      <button action="/speak" type="submit" id="speak-button">Speak Text</button>
+      <audio id="audio" controls>
+     <source src="../1234567.mp3" type="audio/mpeg">
+      </audio> 
+    </div> -->
+    <div class="a">
+    {{ summary }}
+    </div>
+   
+    <!-- <div>
+      <audio controls>
+        <source src="summary.mp3" type="audio/mpeg">
+      </audio>
+    </div> -->
+
+<div class="elements">
+  <div class="square sq1"></div>
+  <div class="square sq2"></div>
+  <div class="square sq3"></div>
+</div> 
+</div>
+<script>
+  const form = document.querySelector("form");
+  const audio = document.getElementById("audio");
+  form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const text = document.getElementById("text").value;
+      audio.src = "/speak?text=" + encodeURIComponent(text);
+      audio.play();
+  });
+</script>
+</body>
+</html>
