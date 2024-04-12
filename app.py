@@ -83,11 +83,11 @@ def show():
         print(summary)
 
         # Convert the summarized text into speech and save it as an mp3 file
-        tts = gTTS(text=summary, lang='en')
-        tts.save("../summary.mp3")
+        # tts = gTTS(text=summary, lang='en')
+        # tts.save("../summary.mp3")
         # Play the mp3 file
         # subprocess.call(["afplay", "summary.mp3"])
-        os.system("start summary.mp3")
+        # os.system("start summary.mp3")
         return render_template("summary.html", summary = summary)
     return render_template("summary.html")
         # return render_template("summary.html", summary = summary)
